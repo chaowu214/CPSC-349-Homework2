@@ -42,7 +42,7 @@ function setDetailsFromThumb(thumbnail) {
     setDetails(imageFromThumb(thumbnail), titleFromThumb(thumbnail), indexFromThumb(thumbnail));
 }
 
-function addThumbClickHandler(thumb){
+function addThumbClickHandler(thumb) {
     'use strict';
     thumb.addEventListener('click', function (event) {
         event.preventDefault();
@@ -58,58 +58,58 @@ function getThumbnailsArray() {
     return thumbnailArray;
 }
 
-function getLeftButton(){
+function getLeftButton() {
     'use strict';
     var leftButtons = document.querySelectorAll(LEFT_BUTTON_SELECTOR);
     var leftButtonsArray = [].slice.call(leftButtons);
     return leftButtonsArray;
 }
 
-function getRightButton(){
+function getRightButton() {
     'use strict';
     var rightButtons = document.querySelectorAll(RIGHT_BUTTON_SELECTOR);
     var rightButtonsArray = [].slice.call(rightButtons);
     return rightButtonsArray;
 }
 
-function addLeftButtonClickHandler(button){
+function addLeftButtonClickHandler(button) {
     'use strict';
     button.addEventListener('click', function (event) {
         event.preventDefault();
-    
+
         var detailImage = document.querySelector(DETAIL_IMAGE_SELECTOR);
-        var index = parseInt(detailImage.getAttribute('image_index'),10);
+        var index = parseInt(detailImage.getAttribute('image_index'), 10);
 
         index = index - 1;
-        if(index < 1) {
+        if (index < 1) {
             index = 10;
         }
         var thumbnailArray = getThumbnailsArray();
-        
-        setDetailsFromThumb(thumbnailArray[index-1]);
+
+        setDetailsFromThumb(thumbnailArray[index - 1]);
         showDetails();
-        
+
     });
 }
 
-function addRightButtonClickHandler(button){
+function addRightButtonClickHandler(button) {
     'use strict';
     button.addEventListener('click', function (event) {
         event.preventDefault();
-        
+
         var detailImage = document.querySelector(DETAIL_IMAGE_SELECTOR);
-        var index = parseInt(detailImage.getAttribute('image_index'),10);
+        var index = parseInt(detailImage.getAttribute('image_index'), 10);
 
         index = index + 1;
-        if(index > 10) {
+        if (index > 10) {
             index = 1;
         }
 
         var thumbnailArray = getThumbnailsArray();
-         
-        setDetailsFromThumb(thumbnailArray[index-1]);
+
+        setDetailsFromThumb(thumbnailArray[index - 1]);
         showDetails();
-        
+
     });
 }
 
@@ -131,11 +131,11 @@ function showDetails() {
 function addKeyPressHandler() {
     'use strict';
     document.body.addEventListener('keyup', function (event) {
-      event.preventDefault();
-      console.log(event.keyCode);
-      if (event.keyCode === ESC_KEY) {
-        hideDetails();
-      }
+        event.preventDefault();
+        console.log(event.keyCode);
+        if (event.keyCode === ESC_KEY) {
+            hideDetails();
+        }
     });
 }
 

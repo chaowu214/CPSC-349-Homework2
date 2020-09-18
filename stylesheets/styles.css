@@ -20,8 +20,9 @@
     font-style: normal;
 }
 
-html, body { 
-    height: 100%; 
+html,
+body {
+    height: 100%;
 }
 
 body {
@@ -32,12 +33,12 @@ body {
     background: rgb(149, 194, 215);
 }
 
-a { 
-    text-decoration: none; 
+a {
+    text-decoration: none;
 }
 
-.main-header { 
-    flex: 0 1 auto; 
+.main-header {
+    flex: 0 1 auto;
 }
 
 .main-content {
@@ -64,7 +65,7 @@ a {
     min-width: 120px;
     max-width: 120px;
     border: 1px solid rgb(100%, 100%, 100%);
-    border: 1px solid rgba(100%, 100%, 100%, 0.8);  
+    border: 1px solid rgba(100%, 100%, 100%, 0.8);
 
     transition: transform 133ms ease-in-out;
 }
@@ -97,11 +98,11 @@ a {
 
     background: rgb(96, 125, 139);
     color: rgb(202, 238, 255);
-    
-    font-size: 18px;
-  }
 
-.detail-image-container { 
+    font-size: 18px;
+}
+
+.detail-image-container {
     flex: 1 1 auto;
     display: flex;
     justify-content: center;
@@ -112,7 +113,7 @@ a {
     position: relative;
     text-align: center;
 
-    transition: transform 333ms cubic-bezier(1,.06,.28,1);
+    transition: transform 333ms cubic-bezier(1, .06, .28, 1);
 }
 
 .is-tiny {
@@ -120,7 +121,7 @@ a {
     transition: transform 0ms;
 }
 
-.detail-image { 
+.detail-image {
     width: 90%;
 }
 
@@ -143,7 +144,7 @@ a {
     flex-direction: column;
     align-items: center;
 }
-  
+
 .hidden-detail .thumbnail-item {
     max-width: 80%;
 }
@@ -162,7 +163,7 @@ button:hover {
 
 .previous {
     background-color: white;
-    color:black;
+    color: black;
 }
 
 .next {
